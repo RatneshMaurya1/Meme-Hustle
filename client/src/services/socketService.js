@@ -10,7 +10,7 @@ class SocketService {
     if (this.socket) return;
 
     // Use relative URL to work with Vite proxy
-    this.socket = io('/', {
+    this.socket = io(import.meta.env.VITE_API_URL || '/', {
       transports: ['websocket'],
       autoConnect: true
     });
