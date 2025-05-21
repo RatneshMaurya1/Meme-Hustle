@@ -47,20 +47,22 @@ function App() {
   return (
     <div className="min-h-screen bg-cyber-black text-white">
       {/* Header */}
-      <header className="py-6 border-b border-neon-blue">
+      <header className="py-4 sm:py-6 border-b border-neon-blue">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <h1 className="text-4xl font-bold text-neon-pink glitch">MemeHustle</h1>
-            <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <h1 className="text-3xl sm:text-4xl font-bold text-neon-pink glitch">MemeHustle</h1>
+            
+            {/* Navigation Buttons - Visible on all screen sizes */}
+            <div className="flex gap-3 sm:gap-4">
               <button
                 onClick={() => setShowLeaderboard(!showLeaderboard)}
-                className="neon-button"
+                className="neon-button text-sm sm:text-base"
               >
                 {showLeaderboard ? '✖ Close' : '🏆 Leaderboard'}
               </button>
               <button
                 onClick={() => setShowCreateForm(!showCreateForm)}
-                className="neon-button"
+                className="neon-button text-sm sm:text-base"
               >
                 {showCreateForm ? '✖ Close' : '+ Create Meme'}
               </button>
@@ -81,7 +83,7 @@ function App() {
               }
             }}
           >
-            <div className="bg-cyber-black p-6 rounded-lg border border-neon-blue w-full max-w-2xl max-h-[80vh] overflow-y-auto">
+            <div className="bg-cyber-black p-6 rounded-lg border border-neon-blue w-full max-w-2xl max-h-[80vh] overflow-y-auto m-4">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-2xl font-bold text-neon-blue">Leaderboard</h2>
                 <button 
@@ -119,7 +121,6 @@ function App() {
           )}
         </div>
       </main>
-
     </div>
   )
 }
