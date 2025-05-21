@@ -26,7 +26,7 @@ const Leaderboard = ({ onClose, isMobile }) => {
 
   const fetchLeaderboard = async () => {
     try {
-      const response = await fetch('/api/leaderboard?top=10');
+      const response = await fetch('${import.meta.env.VITE_API_URL}/api/leaderboard?top=10');
       if (!response.ok) throw new Error('Failed to fetch leaderboard');
       const data = await response.json();
       setTopMemes(data);

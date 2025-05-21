@@ -34,7 +34,7 @@ const Home = () => {
   const fetchMemes = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('/api/memes');
+      const response = await fetch('${import.meta.env.VITE_API_URL}/api/memes');
       if (!response.ok) throw new Error('Failed to fetch memes');
       const data = await response.json();
       setMemes(data);

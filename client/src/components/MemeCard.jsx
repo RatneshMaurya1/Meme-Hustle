@@ -59,7 +59,7 @@ const MemeCard = ({ meme }) => {
     setError(null);
     
     try {
-      const response = await fetch(`/api/memes/${meme.id}/vote`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/memes/${meme.id}/vote`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const MemeCard = ({ meme }) => {
       console.log('Submitting bid:', bidData);
       setBidError(null);
       
-      const response = await fetch(`/api/memes/${meme.id}/bid`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/memes/${meme.id}/bid`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
