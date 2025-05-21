@@ -1,0 +1,13 @@
+{
+  "name": "memehustle",
+  "version": "1.0.0",
+  "description": "Cyberpunk Meme Marketplace",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev": "cd client && npm run dev",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+} 
